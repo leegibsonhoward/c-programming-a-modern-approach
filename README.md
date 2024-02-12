@@ -10,7 +10,7 @@ This repo contains my personal notes for each chapter. The notes sit alongside t
 <details>
 <summary><strong>Basic Features of C</strong></summary>
 
-- [Chapter 1 - Introducing C]()  
+- [Chapter 1 - Introducing C](/ch-01-intoducing-c/README.md)  
 - [Chapter 2 - C Fundamentals]()  
 - [Chapter 3 - Formatted Input/Output]()  
 - [Chapter 4 - Expressions]()  
