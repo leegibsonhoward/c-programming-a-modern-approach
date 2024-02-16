@@ -4,6 +4,9 @@
 # Unignore all with extensions
 !*.*
 
+# ignore vim .swp files
+*.swp
+
 # Unignore all dirs
 !*/
 
