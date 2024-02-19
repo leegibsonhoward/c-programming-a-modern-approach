@@ -12,7 +12,7 @@ This repo contains my personal notes for each chapter. The notes sit alongside t
 
 - [Chapter 1 - Introducing C](/ch-01-introducing-c/README.md)  
 - [Chapter 2 - C Fundamentals](/ch-02-c-fundamentals/README.md)  
-- [Chapter 3 - Formatted Input/Output]()  
+- [Chapter 3 - Formatted Input/Output](/ch-03-formatted-input-output/README.md)  
 - [Chapter 4 - Expressions]()  
 - [Chapter 5 - Selection Statements]()  
 - [Chapter 6 - Loops]()  
