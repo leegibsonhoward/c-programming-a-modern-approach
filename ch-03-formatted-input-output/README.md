@@ -113,4 +113,14 @@ if using the correct prefix i.e: `0`(octal) or `0x`(hex)
 - `\t`(tab stop) is os specific and can vary depending on what os your using.
 
 
+#### READ THESE LAST 3 Q&A's
+
+Q: What does scanf do if it’s asked to read a number but the user enters
+nonnumeric input?
+
+Q: I don’t understand how scanf can “put back” characters and read them
+again later. [p. 44]
+
+Q: What does scanf do if the user puts punctuation marks (commas, for example)
+between numbers?
 
