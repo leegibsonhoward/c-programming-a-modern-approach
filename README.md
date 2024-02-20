@@ -1,7 +1,6 @@
-# C Programming A Modern Approach, 2nd Edition  
+# 📖 C Programming A Modern Approach, Second Edition  
+Code examples, and my solutions to the exercises and projects.  
 ---
-
-## Code examples, and my solutions to the exercises and projects.
 This repo contains my personal notes for each chapter. The notes sit alongside the code and are contained in one single `README.md` file within each chapters respective folder.  
 
 #### Table of content:
