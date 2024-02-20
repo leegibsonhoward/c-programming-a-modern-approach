@@ -124,3 +124,8 @@ again later. [p. 44]
 Q: What does scanf do if the user puts punctuation marks (commas, for example)
 between numbers?
 
+## My own q&a
+### Does `.` count when calculationg field widtht?
+
+Question about using float value with int.Everything after the decimal is stripped.  
+[Casting a double as an int, does it round or just strip digits?](https://stackoverflow.com/questions/13292148/casting-a-double-as-an-int-does-it-round-or-just-strip-digits)
