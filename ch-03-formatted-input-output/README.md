@@ -97,11 +97,17 @@ DONT CONFUSE SCANF WITH PRINTF!!! And heres why!
 
 - To scanf, a new-line character in a format string is equivalent to a space; 
 
-- What happens with "other" characters?
+- What happens with "other" characters?  
+    - scanf compares it with the next input character. If the two characters
+match, scanf discards the input character and continues processing the for-
+mat string. If the characters don’t match, scanf puts the offending character
+back into the input, then aborts without further processing the format string or
+reading characters from the input.  
+<br>
 
 - with scanf there’s often no need for a format string to include characters other than
-conversion specifications.
-
+conversion specifications.  
+<br>
 
 **Q&A**
 Q: What’s the difference between %i and %d? [p. 39]
@@ -124,8 +130,9 @@ again later. [p. 44]
 Q: What does scanf do if the user puts punctuation marks (commas, for example)
 between numbers?
 
-## My own q&a
-### Does `.` count when calculationg field widtht?
-
-Question about using float value with int.Everything after the decimal is stripped.  
+### My own q&a***
+1. Does `.` count when calculationg field widtht?
+2. When you want set width to 2 such as  `02` you can use `%0d` or `%.2d` what's the difference if any?
+3. What happens with float value in int type?  
+    A: Everything after the decimal is stripped.  
 [Casting a double as an int, does it round or just strip digits?](https://stackoverflow.com/questions/13292148/casting-a-double-as-an-int-does-it-round-or-just-strip-digits)
