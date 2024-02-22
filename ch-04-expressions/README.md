@@ -72,4 +72,9 @@ Compute the remainder when the adjusted total is divided by 10.
 Subtract the remainder from 9.
 ```
 
+The above method didnt stick so I found another resource on the internet where
+finding the check digit is easier to grasp. Follow the link below:  
+[Check digit on Youtube](https://www.youtube.com/watch?v=4C3uwfoR88c)
+
+afterwards learn the method in the book was easier to grasp.
 
