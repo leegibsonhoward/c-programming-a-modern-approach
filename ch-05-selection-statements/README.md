@@ -286,3 +286,18 @@ switch (grade) {
 }
 ```
 
+**Q&A**
+
+- programming style is of choice just be consistent
+
+- my personal favorite now is allman but i used K&R style until I
+started learning from this book
+
+- bool or boolean, weren’t chosen because existing C programs might
+already define these names, causing older code not to compile.
+
+- The C89 standard specifies that names beginning with an underscore
+followed by an uppercase letter are reserved for future use and should
+not be used by programmers.
+
+
