@@ -13,7 +13,7 @@ This repo contains my personal notes for each chapter. The notes sit alongside t
 - [Chapter 2 - C Fundamentals](/ch-02-c-fundamentals/README.md)  
 - [Chapter 3 - Formatted Input/Output](/ch-03-formatted-input-output/README.md)  
 - [Chapter 4 - Expressions](/ch-04-expressions/README.md)  
-- [Chapter 5 - Selection Statements]()  
+- [Chapter 5 - Selection Statements](/ch-05-selection-statements/README.md)  
 - [Chapter 6 - Loops]()  
 - [Chapter 7 - Basic Types]()  
 - [Chapter 8 - Arrays]()  
