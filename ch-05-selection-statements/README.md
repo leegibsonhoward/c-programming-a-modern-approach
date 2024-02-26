@@ -112,4 +112,177 @@ statement as its else clause.
 
 - cascading creates the potential for `ad infinitum`
 
+**The “Dangling `else`” Problem**
+
+- C follows the rule that an else clause belongs to the nearest
+if statement that hasn’t already been paired with an else.
+
+```c
+if (y != 0) // else belongs to this if statment
+    if (x != 0) // not this
+        result = x / y;
+else // belongs to the outter if above
+    printf("Error: y is equal to 0\n");
+```
+
+Instead use braces to prevent this potential bug from crepping
+into source code.  
+
+```c
+if (y != 0)
+{
+    if (x != 0)
+        result = x / y;
+} else
+    printf("Error: y is equal to 0\n");
+```
+
+**Conditional Expressions**
+
+- conditional operator consists of two symbols (? and :):  
+`expr1 ? expr2 : expr3`
+
+- requires three operands instead of one or two.
+
+- should be read “if expr1 then expr2 else expr3.”
+
+- The following example illustrates the conditional operator:  
+```c
+int i, j, k;
+i = 1;
+j = 2;
+k = i > j ? i : j; /* k is now 2 */
+k = (i >= 0 ? i : 0) + j; /* k is now 3 */
+```
+
+- parentheses are necessary, by the way; the precedence of the
+conditional operator is less than that of the other operators
+we’ve discussed so far, with the exception of the
+assignment operators.
+
+-Conditional expressions tend to make programs shorter but
+harder to understand, so **it’s probably best to avoid them**.  
+
+**Boolean Values in C89**
+
+- before c99 there was no boolean type in C programming language.
+
+- in C89 declare an int variable and then assign it either 0 or 1.
+this was easy to miss and  ureadable by unsuspecting developers.
+
+- To make programs more understandable, C89 programmers
+often define macros with names such as TRUE and FALSE:  
+```c
+#define TRUE 1
+#define FALSE 0
+```
+
+- set as flag:
+```
+flag = FALSE;
+…
+flag = TRUE;
+```
+
+Then test using:
+```
+if (flag == TRUE) …
+```
+or just 
+```
+if (flag) …
+
+```
+
+- but the latter form is better since it is more concise and won't
+fail if the value is other than 1(TRUE)  
+
+```c
+if (flag == FALSE) …
+```
+or you can be concise and use the below form:  
+```
+if (!flag) …
+```
+
+- One step futher you can define a type so when using it you know
+its meant to be used as a BOOL type.
+`#define BOOL int`  
+
+- Then use it like below
+`BOOL flag;`
+
+**Boolean Values in C99**
+
+- In C99 you can use _Bool type:  
+`_Bool flag;`
+
+- `<stdbool.h>` provides a macro, bool, that stands for _Bool:  
+`bool flag;`
+
+- The <stdbool.h> header also supplies macros named true and false,
+which stand for 1 and 0, respectively:  
+```
+flag = false;
+…
+flag = true;
+```
+
+**The switch Statement**
+
+- in most cases a switch is equivalent to cascaded statements.
+
+- switch statement is often easier to read than a cascaded if statement
+
+- switch must be followed by an integer expression in parentheses:  
+```c
+switch ( expression ) { // controlling expression
+    case constant-expression : // case label(constant expression)
+        statements // any number of statments
+    …
+    case constant-expression :
+        statements
+    default : statements
+}
+```
+
+- duplicate case labels arent allowed
+
+- default case doesnt need to go last
+
+- Only one constant expression may follow the word case
+
+- there’s no way to write a case label that specifies a range
+of values, as there is in some programming languages.
+
+- default case is not required; control simply passes to the
+next statement after the switch.
+
+**The Role of the break Statement**  
+
+- “break” out of the switch statement; execution continues
+at the next statement after the switch.
+
+- switch statement is really a form of “computed jump.”
+
+- When the last statement in the case has been executed, control
+“falls through” to the first statement in the following case; the
+case label for the next case is ignored.
+
+- Without break (or some other jump statement), control will flow from
+one case into the next.
+
+- omitting break is sometimes done intentionally to allow several
+cases to share code.
+
+- it’s a good idea to point out any deliberate omission of break:  
+```
+switch (grade) {
+    case 4: case 3: case 2: case 1:
+        num_passing++;
+        /* FALL THROUGH */
+    case 0: total_grades++;
+        break;
+}
+```
 
